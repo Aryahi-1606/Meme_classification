@@ -1,0 +1,68 @@
+<!--<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Upload Image</title>
+</head>
+<body background="https://www.meme-arsenal.com/memes/b3616dc935ac0f94761230eebd45d146.jpg" style="background-size: 100% 100%;">
+  <div class="col-sm">
+    <h1><span class="badge badge-danger">MEME CHECKPOINT</span></h1>
+  </div>
+  <div class="col-sm">
+    <form action = "/predict" method = "post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type = "submit" value="Upload">
+    </form>
+  </div>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meme Sentiment Analyzer</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: #1e293b;
+            padding: 40px;
+            border-radius: 12px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        input[type="file"] {
+            margin: 20px 0;
+        }
+        button {
+            padding: 10px 20px;
+            background: #38bdf8;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #0ea5e9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🧠 Meme Sentiment Analyzer</h1>
+        <p>Upload a meme to analyze its sentiment</p>
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required><br>
+            <button type="submit">Analyze</button>
+        </form>
+    </div>
+</body>
+</html>
